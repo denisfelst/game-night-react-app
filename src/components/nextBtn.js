@@ -1,12 +1,9 @@
-function NextBtn({ current, changeCurrent }) {
-  const nextNumber = current + 1;
-  const nextLink = `/q${nextNumber}`;
-  console.log("we are in ", current, "next is", current + 1);
+function NextBtn({ verifyAnswer, changeCurrent }) {
   return (
     <div className="App-btn">
-      {/* <a className="App-link" onClick={() => changeCurrent()} href={nextLink}>
+      <button className="App-link" onClick={() => changeCurrent()}>
         NEXT
-      </a> */}
+      </button>
     </div>
   );
 }

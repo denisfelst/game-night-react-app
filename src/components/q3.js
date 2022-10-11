@@ -6,14 +6,13 @@ function Q3({ current, changeCurrent }) {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Nivel1</h1>
-        <h2>Pregunta {current}</h2>
+        <h1>Pregunta {current}</h1>
+        <p>
+          Pregunta va aqui. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry.
+        </p>
+        <NextBtn current={current} changeCurrent={() => changeCurrent()} />
       </header>
-      <p>
-        Pregunta va aqui. Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry.
-      </p>
-      <NextBtn current={current} changeCurrent={() => changeCurrent()} />
     </div>
   );
 }
