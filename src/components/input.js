@@ -1,12 +1,19 @@
-function Input({ storeAnswer, verifyAnswer }) {
+function Input({ storeAnswer, verifyAnswer, inputType }) {
   const answerHandler = (event) => {
     const val = event.target.value;
     storeAnswer(val);
   };
   return (
     <>
-      <input type="text" onChange={answerHandler} />
-      <button onClick={() => verifyAnswer()}>Verificar</button>
+      <input
+        className="App-input"
+        type={inputType}
+        placeholder={inputType}
+        onChange={answerHandler}
+      />
+      <button className="App-verify" onClick={() => verifyAnswer()}>
+        Verificar
+      </button>
     </>
   );
 }

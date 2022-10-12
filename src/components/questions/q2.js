@@ -1,36 +1,53 @@
 import { useState } from "react";
+import ErrorMsg from "../error";
 import Input from "../input";
 import NextBtn from "../nextBtn";
+import SuccessMsg from "../success";
 
-function Q2({ current, changeCurrent }) {
+function Q2({
+  current,
+  changeCurrent,
+  inputType,
+  pregunta,
+  pista,
+  solucion,
+  nivel,
+}) {
   const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(false);
-  const solution = "lal";
-
-  if (current === -1) {
-    console.log("question number error");
-    return;
-  }
+  const [triedOnce, setTriedOnce] = useState(false);
+  const [tryNum, setTryNum] = useState(0);
 
   const storeAnswer = (val) => {
     setAnswer(val);
   };
 
   const verifyAnswer = () => {
-    if (answer === solution) changeCurrent();
-    else alert("Que pringao, inténtalo de nuevo");
+    setTryNum((prev) => prev + 1);
+    console.log(answer);
+    answer === solucion ? setIsCorrect(true) : setTriedOnce(true);
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Pregunta {current}</h1>
-        <p>
-          Pregunta va aqui. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.
-        </p>
+    <div className={`App`}>
+      <header className={`App-header ${nivel}`}>
+        <h1>
+          <span className={`${nivel}-text`}>Nivel {nivel.substring(1)}</span> -
+          Pregunta {current}
+        </h1>
+        {!isCorrect && (
+          <>
+            <p className="App-question">{pregunta}</p>
+            <Input
+              inputType={inputType}
+              storeAnswer={storeAnswer}
+              verifyAnswer={verifyAnswer}
+            />
+          </>
+        )}
 
-        <Input storeAnswer={storeAnswer} verifyAnswer={verifyAnswer} />
+        {!isCorrect && triedOnce && <ErrorMsg tryNum={tryNum} pista={pista} />}
+        {isCorrect && current > 0 && <SuccessMsg />}
         {isCorrect && <NextBtn changeCurrent={() => changeCurrent()} />}
       </header>
     </div>

@@ -1,10 +1,8 @@
 function NextBtn({ changeCurrent }) {
   return (
-    <div className="App-btn">
-      <button className="App-link" onClick={() => changeCurrent()}>
-        NEXT
-      </button>
-    </div>
+    <button className="App-btn" onClick={() => changeCurrent()}>
+      Siguiente
+    </button>
   );
 }
 
