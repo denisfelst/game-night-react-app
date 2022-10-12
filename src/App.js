@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./components/home";
-import Q1 from "./components/q1";
-import Q2 from "./components/q2";
-import Q3 from "./components/q3";
+import Q1 from "./components/questions/q1";
+import Q2 from "./components/questions/q2";
+import Q3 from "./components/questions/q3";
 
 function App() {
   const [current, setCurrent] = useState(0);
@@ -27,7 +27,7 @@ function App() {
     default:
       return (
         <h1>
-          ERROR - <a href="/">go home</a>
+          FINITO. <a href="/">Go home</a>
         </h1>
       );
   }
