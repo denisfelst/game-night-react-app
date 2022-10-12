@@ -1,7 +1,7 @@
-function NextBtn({ changeCurrent }) {
+function NextBtn({ current, changeCurrent }) {
   return (
     <button className="App-btn" onClick={() => changeCurrent()}>
-      Siguiente
+      {current > 0 ? "Siguiente" : "Empecemos esta vaina"}
     </button>
   );
 }

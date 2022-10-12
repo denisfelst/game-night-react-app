@@ -19,7 +19,10 @@ function Q3({
   const [tryNum, setTryNum] = useState(0);
 
   const storeAnswer = (val) => {
-    setAnswer(val);
+    let fixedVal = val.trim();
+    fixedVal = fixedVal.toLowerCase();
+    console.log();
+    setAnswer(fixedVal);
   };
 
   const verifyAnswer = () => {
@@ -48,7 +51,9 @@ function Q3({
 
         {!isCorrect && triedOnce && <ErrorMsg tryNum={tryNum} pista={pista} />}
         {isCorrect && current > 0 && <SuccessMsg />}
-        {isCorrect && <NextBtn changeCurrent={() => changeCurrent()} />}
+        {isCorrect && (
+          <NextBtn current={current} changeCurrent={() => changeCurrent()} />
+        )}
       </header>
     </div>
   );
