@@ -1,18 +1,55 @@
-export const N1 = "n1";
-export const N2 = "n2";
-export const N3 = "n3";
+const niveles = {
+  N1: "n1",
+  N2: "n2",
+  N3: "n3",
+};
 
-export const T1 = "text";
-export const Q1 = "Esta es la pregunta 1";
-export const S1 = "a";
-export const P1 = "mira aqui... mira alla... muevete aqui...";
+export const elem = [
+  {
+    T: "text",
+    Q: "Esta es la pregunta 1",
+    S: "a",
+    P: "mira aqui... mira alla... muevete aqui..1.",
+    N: niveles.N1,
+  },
 
-export const T2 = "date";
-export const Q2 = "Esta es la pregunta 2";
-export const S2 = "2022-10-12";
-export const P2 = "mira aqui... mira alla... muevete aqui...";
+  {
+    T: "date",
+    Q: "Esta es la pregunta 2Esta es la pregunta 2Esta es la pregunta 2Esta es la pregunta 2Esta es la pregunta 2",
+    S: "2022-10-12",
+    P: "mira aqui... mira alla... muevete aqui...2",
+    N: niveles.N2,
+  },
 
-export const T3 = "number";
-export const Q3 = "Esta es la pregunta 3";
-export const S3 = "14";
-export const P3 = "mira aqui... mira alla... muevete aqui...";
+  {
+    T: "number",
+    Q: "Esta es la pregunta 3",
+    S: "14",
+    P: "mira aqui... mira alla... muevete aqui...3",
+    N: niveles.N2,
+  },
+
+  {
+    T: "text",
+    Q: "Esta es la pregunta 4",
+    S: "Aaa aAA",
+    P: "mira aqui... mira alla... muevete aqui..1.",
+    N: niveles.N2,
+  },
+
+  {
+    T: "text",
+    Q: "Esta es la pregunta 5",
+    S: "Aaa aAA",
+    P: "mira aqui... mira alla... muevete aqui...2",
+    N: niveles.N3,
+  },
+
+  {
+    T: "text",
+    Q: "Esta es la pregunta 6",
+    S: "a",
+    P: "mira aqui... mira alla... muevete aqui...3",
+    N: niveles.N3,
+  },
+];

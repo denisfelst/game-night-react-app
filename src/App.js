@@ -1,65 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import * as C from "./constants";
+import { elem } from "./constants";
 import Home from "./components/home";
 import Q1 from "./components/questions/q1";
-import Q2 from "./components/questions/q2";
-import Q3 from "./components/questions/q3";
+import End from "./components/end";
 
 function App() {
   const [current, setCurrent] = useState(0);
+  const [siteToRender, setSiteToRender] = useState(
+    <Home current={current} changeCurrent={() => changeCurrent()} />
+  );
 
   const changeCurrent = () => {
     setCurrent((prevState) => prevState + 1);
   };
 
-  switch (current) {
-    case 0:
-      return <Home current={current} changeCurrent={() => changeCurrent()} />;
+  useEffect(() => {
+    if (current === 0) return;
 
-    case 1:
-      return (
-        <Q1
-          current={current}
-          inputType={C.T1}
-          nivel={C.N1}
-          pregunta={C.Q1}
-          pista={C.P1}
-          solucion={C.S1}
-          changeCurrent={() => changeCurrent()}
-        />
-      );
-    case 2:
-      return (
-        <Q2
-          current={current}
-          inputType={C.T2}
-          nivel={C.N2}
-          pregunta={C.Q2}
-          pista={C.P2}
-          solucion={C.S2}
-          changeCurrent={() => changeCurrent()}
-        />
-      );
-    case 3:
-      return (
-        <Q3
-          current={current}
-          inputType={C.T3}
-          nivel={C.N3}
-          pregunta={C.Q3}
-          pista={C.P3}
-          solucion={C.S3}
-          changeCurrent={() => changeCurrent()}
-        />
-      );
-    default:
-      return (
-        <h1>
-          FINITO. <a href="/">Go home</a>
-        </h1>
-      );
-  }
+    if (current === elem.length) {
+      setSiteToRender(<End />);
+      return;
+    }
+
+    const e = elem[current - 1];
+    const site = (
+      <Q1
+        current={current}
+        nivel={e.N}
+        inputType={e.T}
+        pregunta={e.Q}
+        pista={e.P}
+        solucion={e.S}
+        changeCurrent={() => changeCurrent()}
+      />
+    );
+    setSiteToRender(site);
+  }, [current]);
+  return siteToRender;
 }
 
 export default App;

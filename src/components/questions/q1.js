@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Clue from "../clue";
 import ErrorMsg from "../error";
 import Input from "../input";
@@ -19,23 +19,44 @@ function Q1({
   const [triedOnce, setTriedOnce] = useState(false);
   const [timeOver, setTimeOver] = useState(false);
   const [tryNum, setTryNum] = useState(0);
+  const [timeOutArray, setTimeOutArray] = useState(null);
 
-  setTimeout(() => {
-    setTimeOver(true);
-  }, 10000);
+  //timer to show clue
+  const timer = (cur) => {
+    setTimeOutArray(
+      setTimeout(() => {
+        setTimeOver(true);
+      }, 60000)
+    );
+  };
 
   const storeAnswer = (val) => {
-    let fixedVal = val.trim();
+    //let fixedVal = val.trim();
+    let fixedVal = val.replace(/\s/g, "");
     fixedVal = fixedVal.toLowerCase();
-    console.log();
     setAnswer(fixedVal);
   };
 
   const verifyAnswer = () => {
     setTryNum((prev) => prev + 1);
-    console.log(answer);
-    answer === solucion ? setIsCorrect(true) : setTriedOnce(true);
+    let fixedSol = solucion.replace(/\s/g, "");
+    fixedSol = fixedSol.toLowerCase();
+    console.log("input", answer, "solution", fixedSol);
+    answer === fixedSol ? setIsCorrect(true) : setTriedOnce(true);
   };
+
+  useEffect(() => {
+    // reset all values
+    if (current < 2) return;
+    clearTimeout(timeOutArray);
+    setTimeOver(false);
+    setTimeOutArray(null);
+    timer(current);
+    setAnswer("");
+    setIsCorrect(false);
+    setTriedOnce(false);
+    setTryNum(0);
+  }, [current]);
 
   return (
     <div className={`App`}>
