@@ -77,7 +77,7 @@ function Q1({
         )}
 
         {!isCorrect && triedOnce && <ErrorMsg tryNum={tryNum} />}
-        {!isCorrect && (timeOver || tryNum > 2) && <Clue pista={pista} />}
+        {!isCorrect && (timeOver || tryNum > 3) && <Clue pista={pista} />}
         {isCorrect && current > 0 && <SuccessMsg />}
         {isCorrect && (
           <NextBtn current={current} changeCurrent={() => changeCurrent()} />
