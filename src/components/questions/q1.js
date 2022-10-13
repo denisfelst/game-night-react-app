@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Clue from "../clue";
 import ErrorMsg from "../error";
 import Input from "../input";
 import NextBtn from "../nextBtn";
@@ -16,7 +17,12 @@ function Q1({
   const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(false);
   const [triedOnce, setTriedOnce] = useState(false);
+  const [timeOver, setTimeOver] = useState(false);
   const [tryNum, setTryNum] = useState(0);
+
+  setTimeout(() => {
+    setTimeOver(true);
+  }, 10000);
 
   const storeAnswer = (val) => {
     let fixedVal = val.trim();
@@ -49,7 +55,8 @@ function Q1({
           </>
         )}
 
-        {!isCorrect && triedOnce && <ErrorMsg tryNum={tryNum} pista={pista} />}
+        {!isCorrect && triedOnce && <ErrorMsg tryNum={tryNum} />}
+        {!isCorrect && (timeOver || tryNum > 2) && <Clue pista={pista} />}
         {isCorrect && current > 0 && <SuccessMsg />}
         {isCorrect && (
           <NextBtn current={current} changeCurrent={() => changeCurrent()} />
