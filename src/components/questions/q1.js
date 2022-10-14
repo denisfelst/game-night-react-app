@@ -10,6 +10,7 @@ function Q1({
   changeCurrent,
   inputType,
   pregunta,
+  preguntaEn,
   pista,
   solucion,
   nivel,
@@ -26,7 +27,7 @@ function Q1({
     setTimeOutArray(
       setTimeout(() => {
         setTimeOver(true);
-      }, 60000)
+      }, 100000)
     );
   };
 
@@ -68,6 +69,8 @@ function Q1({
         {!isCorrect && (
           <>
             <p className="App-question">{pregunta}</p>
+            {preguntaEn && <p className="App-question-en">{preguntaEn}</p>}
+
             <Input
               inputType={inputType}
               storeAnswer={storeAnswer}

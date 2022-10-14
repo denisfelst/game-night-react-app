@@ -81,8 +81,10 @@
 }
 
 .App-question {
-  border: 1px red dotted;
-  padding: 10px 5px;
+
+}
+.App-question-en {
+  color: #888;
 }
 /* Level: color of borders */
 .n1 {

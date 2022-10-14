@@ -30,6 +30,7 @@ function App() {
         nivel={e.N}
         inputType={e.T}
         pregunta={e.Q}
+        preguntaEn={e.Qen}
         pista={e.P}
         solucion={e.S}
         changeCurrent={() => changeCurrent()}
