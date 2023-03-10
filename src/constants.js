@@ -72,7 +72,7 @@ export const elem = [
     Qen: "What keeps one of the life forms in the house in the air..",
     Qfr: "Ce qui maintient dans l'air l'une des formes de vie de la maison..",
     S: "8",
-    P: "noto la suciedad en mis dientes",
+    P: "hanging",
     N: niveles.N1,
   },
 
@@ -101,7 +101,7 @@ export const elem = [
     T: "text",
     Q: "Estas en la cocina. Por la ventana entra un rayo de sol muy molesto. Que haces?",
     Qen: "You are in the kitchen. An annoying ray of sunlight is coming through the window",
-    Qfr: "Vous êtes dans la cuisine. Un rayon de soleil gênant passe par la fenêtre. Qu'est-ce que vous faites ?",
+    Qfr: "Vous êtes dans la cuisine. Un rayon de soleil gênant passe par la fenêtre. Qu'est-ce que vous faites?",
     S: "Lady Gaga",
     P: "Alejandro",
     N: niveles.N2,
