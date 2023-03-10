@@ -18,10 +18,11 @@ export const elem = [
 
   {
     T: "text",
-    Q: "apellido del alcalde del lugar de nacimiento de esta persona?",
+    Q: "que mantiene las mesas balanceadas?",
     Qen: "what keeps the tables balanced?",
     Qfr: "Qu'est-ce qui maintient l'équilibre des tables ?",
     S: "George",
+    P: "mesas del salon...",
     N: niveles.N1,
   },
 
@@ -32,7 +33,7 @@ export const elem = [
     Qfr: "nom du maire du lieu de naissance de cette personne",
     S: "Waidbacher",
     N: niveles.N1,
-    I: "./../assets/hitler.jpg"
+    I: "./../assets/hitler.jpg",
   },
 
   {
@@ -115,7 +116,7 @@ export const elem = [
     P: "fusible?",
     N: niveles.N2,
   },
-  
+
   // LEVEL 3
   {
     T: "number",
@@ -146,7 +147,6 @@ export const elem = [
     N: niveles.N3,
   },
 
-
   {
     T: "date",
     Q: "Este juego me da sueño",
@@ -156,7 +156,7 @@ export const elem = [
     P: "drink something?",
     N: niveles.N3,
   },
-  
+
   {
     T: "number",
     Q: "Precio Yuca frita del restaurante El Rincon Azteca?",
@@ -165,5 +165,5 @@ export const elem = [
     S: "4.90",
     P: "Esta cerca del piso",
     N: niveles.N3,
-  }
+  },
 ];
