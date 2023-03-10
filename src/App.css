@@ -80,6 +80,11 @@
   font-size: 16px;
 }
 
+.App-img {
+  max-height: 400px;
+  max-width: 90%;
+}
+
 .App-question {
 
 }

@@ -31,8 +31,10 @@ function App() {
         inputType={e.T}
         pregunta={e.Q}
         preguntaEn={e.Qen}
+        preguntaFr={e.Qfr}
         pista={e.P}
         solucion={e.S}
+        img={e.I}
         changeCurrent={() => changeCurrent()}
       />
     );

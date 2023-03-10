@@ -4,6 +4,8 @@ import ErrorMsg from "../error";
 import Input from "../input";
 import NextBtn from "../nextBtn";
 import SuccessMsg from "../success";
+import imgPizza from "./../../assets/pizza.png";
+import imgHitler from "./../../assets/hitler.jpg";
 
 function Q1({
   current,
@@ -11,9 +13,11 @@ function Q1({
   inputType,
   pregunta,
   preguntaEn,
+  preguntaFr,
   pista,
   solucion,
   nivel,
+  img
 }) {
   const [answer, setAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(false);
@@ -46,6 +50,18 @@ function Q1({
     answer === fixedSol ? setIsCorrect(true) : setTriedOnce(true);
   };
 
+  const getImg = (current) => {
+    let img;
+    switch(current){
+      case 3:
+        img = imgHitler;
+        break;
+      default:
+        img = null;
+    } 
+    return img;
+  }
+
   useEffect(() => {
     // reset all values
     if (current < 2) return;
@@ -69,7 +85,8 @@ function Q1({
         {!isCorrect && (
           <>
             <p className="App-question">{pregunta}</p>
-            {preguntaEn && <p className="App-question-en">{preguntaEn}</p>}
+            {preguntaEn && <p className="App-question-en">{preguntaEn} <br/> {preguntaFr}</p>}
+            {img && <img className="App-img" src={getImg(current)} alt={current}></img>}
 
             <Input
               inputType={inputType}
@@ -80,7 +97,7 @@ function Q1({
         )}
 
         {!isCorrect && triedOnce && <ErrorMsg tryNum={tryNum} />}
-        {!isCorrect && (timeOver || tryNum > 3) && <Clue pista={pista} />}
+        {pista && !isCorrect && (timeOver || tryNum > 3) && <Clue pista={pista} />}
         {isCorrect && current > 0 && <SuccessMsg />}
         {isCorrect && (
           <NextBtn current={current} changeCurrent={() => changeCurrent()} />

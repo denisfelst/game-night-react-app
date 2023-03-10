@@ -10,61 +10,67 @@ export const elem = [
     T: "number",
     Q: "Para calentar: del 1 al 10, ¿como de sexy, inteligente y buen organizador de eventos es Denis?",
     Qen: "To warm up: from a scale from 1 to 10, how sexy, inteligent and good event organizer is Denis?",
+    Qfr: "Pour s'échauffer : de 1 à 10, à quel point Denis est-il sexy, intelligent et un bon organisateur d'événements ?",
     S: "10",
     P: "Es obvio.",
     N: niveles.N1,
   },
 
   {
-    T: "number",
-    Q: "Mi comida está sosa, le falta sabor. Me pregunto cuantas especias habrá en esta casa.",
-    Qen: "My food lacks flavour. I wonder how many spices there are in this house.",
-    S: "15", // ======== double Check
-    P: "cocina",
-    N: niveles.N1,
-  },
-
-  {
-    T: "number",
-    Q: "A ver esas matematicas: media de año de nacimiento de jugadores",
-    Qen: "Let's see them math skillz: average year of birth of participants of players",
-    S: "1997.2",
-    P: "Σ(años de nacimiento jugadores) / num. jugadores = ",
-    N: niveles.N1,
-  },
-
-  {
-    T: "number",
-    Q: "Dicen que el queso azul que comen en esta casa tiene bastantes grasas saturadas.",
-    Qen: "They say that the blue cheese they eat in this house has a lot of saturated fats.",
-    S: "59",
-    P: "hoy vi a ailen usarlo en su ensalada",
+    T: "text",
+    Q: "apellido del alcalde del lugar de nacimiento de esta persona?",
+    Qen: "what keeps the tables balanced?",
+    Qfr: "Qu'est-ce qui maintient l'équilibre des tables ?",
+    S: "George",
     N: niveles.N1,
   },
 
   {
     T: "text",
-    Q: "Me rasco la cabeza y sale caspa. Tengo que solucionarlo.",
-    Qen: "I scratch my head and dandruff comes out. I have to do smth about it.",
-    S: "silver",
-    P: "necesito algo anti-caspa",
+    Q: "apellido del alcalde del lugar de nacimiento de esta persona?",
+    Qen: "surname of the mayor of this person's place of birth?",
+    Qfr: "nom du maire du lieu de naissance de cette personne",
+    S: "Waidbacher",
+    N: niveles.N1,
+    I: "./../assets/hitler.jpg"
+  },
+
+  {
+    T: "number",
+    Q: "verano en valencia. hace calor. que haces?",
+    Qen: "summer in valencia. it's hot. what will you do about it?.",
+    Qfr: "été à valence. il fait chaud. que ferez-vous ?",
+    S: "44",
+    P: "gira muy rapido",
+    N: niveles.N1,
+  },
+
+  {
+    T: "text",
+    Q: "Si me creo muy guapo, cada mañana...",
+    Qen: "If I think I'm beautiful, every morning I...",
+    Qfr: "Si je me trouve beau, chaque matin je...",
+    S: "kunft",
+    P: "me miro!",
+    N: niveles.N1,
+  },
+
+  {
+    T: "date",
+    Q: "Estoy aprendiendo a conducir, mirame!",
+    Qen: "I am learning to drive, look at me!",
+    Qfr: "J'apprends à conduire, regardez-moi !",
+    S: "2023-03-17",
+    P: "Señal. salon.",
     N: niveles.N1,
   },
 
   {
     T: "number",
-    Q: "Ya he llenado el depósito de la moto 2 veces esta semana. La más barata nunca ha sido tan cara!",
-    Qen: "I have already filled up my bike 2 times this week. The cheapest has never been so expensive!",
-    S: "1.809",
-    P: "la 95 es la mas barata. ¿tienes buena vista?",
-    N: niveles.N1,
-  },
-
-  {
-    T: "number",
-    Q: "Te acabas de despertar y te huele el aliento.",
-    Qen: "You just woke up and your breath stinks.",
-    S: "10",
+    Q: "Lo que mantiene en el aire a una de las formas de vida que hay en la casa.",
+    Qen: "What keeps one of the life forms in the house in the air..",
+    Qfr: "Ce qui maintient dans l'air l'une des formes de vie de la maison..",
+    S: "8",
     P: "noto la suciedad en mis dientes",
     N: niveles.N1,
   },
@@ -72,108 +78,92 @@ export const elem = [
   //LEVEL 2
 
   {
-    T: "text",
-    Q: "Papada de aguila",
-    Qen: "Eagle double chin",
-    S: "new york",
-    P: "1: has visto un aguila ultimamente? 2: cuidao abreviaturas.",
+    T: "number",
+    Q: "Se me quema la pizza!!!",
+    Qen: "My pizza is burning!!!",
+    Qfr: "Ma pizza brûle !!!",
+    S: "32",
     N: niveles.N2,
   },
 
   {
     T: "texto",
-    Q: "Encuentra la palabra compuesta de las iniciales de los jugadores de esta partida (no necesariamente todos, se puede repetir letra maximo 1 vez) - Pista: especies marinas",
-    Qen: "Find the word composed of the initials of the players of this game (not necessarily all of them, you can repeat letter maximum 1 time) - Hint: marine species. sorry emma, spanish word :( ",
-    S: "almeja",
-    P: "invertebrado, primitivo, duro, a veces pegado a las rocas",
-    N: niveles.N2,
-  },
-
-  {
-    T: "date",
-    Q: "Gin, tonica, vasos... ¿que más falta?",
-    Qen: "Gin, tonic, glasses... What else is missing?",
-    S: "2019-12-04",
-    P: "beber eso en verano debe ser mortal",
-    N: niveles.N2,
-  },
-
-  {
-    T: "date",
-    Q: "Piensa outside the box: el lugar más TOP🔝 ...",
-    Qen: "Think outside the box : most TOP place 🔝 ...",
-    S: "2022-10-15",
-    P: "...del edificio",
+    Q: "Lo que mas odio despues de comer",
+    Qen: "What I hate most after eating",
+    Qfr: "Ce que je déteste le plus après avoir mangé",
+    S: "ottawa",
+    P: "platos",
     N: niveles.N2,
   },
 
   {
     T: "text",
-    Q: "Conoces el chiste de la bombilla? Ponedlo en practica, tontos.",
-    Qen: "You know the joke about the light bulb? Put it into practice, you fools.",
-    S: "roggiero",
-    P: "hay varias por aqui",
+    Q: "Estas en la cocina. Por la ventana entra un rayo de sol muy molesto. Que haces?",
+    Qen: "You are in the kitchen. An annoying ray of sunlight is coming through the window",
+    Qfr: "Vous êtes dans la cuisine. Un rayon de soleil gênant passe par la fenêtre. Qu'est-ce que vous faites ?",
+    S: "Lady Gaga",
+    P: "Alejandro",
     N: niveles.N2,
   },
+
   {
     T: "text",
-    Q: "Balcón. Plaza. Acera. __:__ ¿Lo ves? 👀 ",
-    Qen: "Balcony. Plaza. Sidewalk. _ _ : _ _ ¿See it? 👀",
-    S: "26:24",
-    P: "Sigue el mismo formato.",
+    Q: "Ups, ha habido un apagón en la casa",
+    Qen: "Oops, there was a power outage in the house..",
+    Qfr: "Oups, il y a eu une panne d'électricité dans la maison.",
+    S: "Sudan",
+    P: "fusible?",
     N: niveles.N2,
   },
-
-  {
-    T: "number",
-    Q: "TURN DOWN FOR WHAT",
-    Qen: "(meme)",
-    S: "1234",
-    P: "Busca por el salón",
-    N: niveles.N2,
-  },
-
+  
   // LEVEL 3
-
   {
     T: "number",
-    Q: "Numero de palabras contenidas en el título de la cancion que escuchas en este momento.",
-    Qen: "Number of words contained in the title of the song you are currently listening to.",
-    S: "14",
-    P: "usa la tecnologia",
+    Q: "Intento cambiar de canal pero la tele no responde.",
+    Qen: "I try to change the channel but the TV does not respond.",
+    Qfr: "J'essaie de changer de chaîne mais le téléviseur ne répond pas.",
+    S: "123",
+    P: "baterias?",
     N: niveles.N3,
   },
   {
     T: "text",
-    Q: "¿Cual es el color favorito de la chica del Easy Pizza (pizzeria abajo)?",
-    Qen: "What is the favorite color of the girl at Easy Pizza (pizzeria downstairs)?",
-    S: "azul marino",
-    P: "solo hay una manera de averiguarlo",
-    N: niveles.N3,
-  },
-  {
-    T: "date",
-    Q: "Hay un rumor que dice que los Kinder Bueno del kiosko de la gasolinera están caducados. ¿Será verdad?",
-    Qen: "There is a rumor that states that the Kinder Bueno at the gas station kiosk is out of date. Is it true?",
-    S: "2023-03-21",
-    P: "parte de atrás del paquete.",
+    Q: "Hex #0000FF",
+    Qen: "...",
+    Qfr: "",
+    S: "blue",
+    P: "color?",
     N: niveles.N3,
   },
 
   {
-    T: "number",
-    Q: "¿Cuantas escaleras tiene la entrada principal del edificio?",
-    Qen: "How many stairs does the main entrance of the building have?",
-    S: "29",
-    P: "fijate bien en cada paso...",
+    T: "text",
+    Q: "No tengo 4G ni internet. ",
+    Qen: "I do not have 4G / internet.",
+    Qfr: "Je n'ai pas de 4G ni d'internet.",
+    S: "Nuuk",
+    P: "pass?",
     N: niveles.N3,
   },
+
+
+  {
+    T: "date",
+    Q: "Este juego me da sueño",
+    Qen: "This game makes me sleepy.",
+    Qfr: "Ce jeu me fait dormir",
+    S: "2023-03-09",
+    P: "drink something?",
+    N: niveles.N3,
+  },
+  
   {
     T: "number",
-    Q: "Uf... ya casi estas. Pero aun necesito saber el precio por kilogramo de los anacardos crudos del consum. Son muy sanos!",
-    Qen: "Almost there! But I still need to know the price per kilogram of raw cashew nuts from the consum. They are very healthy!",
-    S: "14.5", //=========CHECK==========
-    P: "Hay uno aqui abajo!",
+    Q: "Precio Yuca frita del restaurante El Rincon Azteca?",
+    Qen: "Price of fried yucca from El Rincon Azteca restaurant??",
+    Qfr: "Prix du yucca frit du restaurant El Rincon Azteca ?",
+    S: "4.90",
+    P: "Esta cerca del piso",
     N: niveles.N3,
-  },
+  }
 ];

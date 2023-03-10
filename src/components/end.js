@@ -13,8 +13,13 @@ function End() {
           Has llegado hasta el final.{" "}
           <span style={{ color: "green" }}>¡Felicidades!</span>
         </h1>
-        <h2>Sólo te queda un paso:</h2>
-        <h3 style={{ color: "red", fontSize: "52px" }}>iPad. 6969.</h3>
+        <h2>Grita esto y ganaras!</h2>
+        <br/>
+        <h2>Shout this out, and you will win!</h2>
+        <br/>
+        <h2>Criez-le et vous gagnerez !</h2>
+        <br/>
+        <h3 style={{ color: "red", fontSize: "52px" }}>HALA MADRID</h3>
 
         <p>Date prisa!!</p>
 
